@@ -1,0 +1,156 @@
+@import url('https://fonts.cdnfonts.com/css/rawline');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rawline', sans-serif;
+    font-size: 18px;
+}
+
+button {
+    outline: none;
+    border: none;
+    background: none;
+}
+header {
+    height: 85px;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 9%;
+}
+
+.menu-lg, .menu-sm {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-sm {
+    display: none;
+}
+
+.header__button {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 11px 17px;
+}
+
+.header__bome_link {
+    color: #FF6E1F;
+    text-decoration: none;
+}
+.header__svg {
+    display: flex;
+    gap: 20%;
+    padding-right: 1%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    border-bottom: 1px solid;
+}
+
+.main__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left_container {
+    padding-left: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.left__header {
+    font-family: 'Rawline', serif;
+    font-size: 3.13cqw;
+    font-weight: 600;
+}
+
+.left__btn {
+    background-color: #000000;
+    color: white;
+    padding: 1.2% 6.4%;
+    box-sizing: border-box;
+    margin-top: 6.7%;
+}
+
+.left__second {
+    font-family: 'Rawline', serif;
+    font-size: 1.67cqw;
+    line-height: 2.5cqw;
+    font-weight: 400;
+    margin-top: 6.7%;
+}
+
+.main__center {
+    width: 1px;
+    background-color: black;
+}
+
+.picture_container {
+    padding: 54px 13.5px;
+}
+
+.cat_picture {
+    width: 100%;
+    aspect-ratio: 932/875;
+    object-fit: cover;
+}
+
+.footer {
+    height: 12px;
+}
+
+@media screen and (max-width: 1401px) {
+    header {
+        padding: 0 0.7%;
+    }
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .left_container {
+        padding: 0;
+        width: 58%;
+        align-items: center;
+    }
+    .left__header {
+        font-size: 3.13cqw;
+        font-weight: 500;
+        margin-top: 10cqh;
+    }
+    .left__second, .left__header {
+        text-align: center;
+    }
+    .left__second {
+        margin-top: 3.7%;
+    }
+    .cat_picture {
+        aspect-ratio: 1372/875;
+    }
+
+.left__btn {
+    margin-top: 4%;
+}
+}
+
+@media screen and (max-width: 991px) {
+    .cat_picture {
+        aspect-ratio: 963/875;
+    }
+    .menu-lg {
+        display: none;
+    }
+    .menu-sm {
+        display: flex;
+    }
+}

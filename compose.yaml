@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  app:
+    build: 
+      context: src
+    hostname: fastapi
+    command: sh -c "gunicorn app:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000"
+  nginx:
+    build: 
+      context: nginx
+    ports:
+      - 80:80
+    depends_on:
+      - app
+
+    
